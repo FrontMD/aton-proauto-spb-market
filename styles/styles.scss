@@ -18,40 +18,14 @@ button::-moz-focus-inner {
     width: 100%
 }
 
-.wrap {
-    position: relative
-}
-
-* {
-    padding: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
     margin: 0;
-    outline: 0;
-    box-sizing: border-box
 }
 
-.wrap {
-    padding: 0 32px;
-    max-width: 1400px;
-    margin: auto
-}
-
-@media only screen and (max-width: 768px) {
-    .wrap {
-        padding: 0 15px
-    }
-}
-
-
-
-@media only screen and (max-width: 1440px) {
-    .wrap {
-        max-width: 1200px
-    }
-}
-
-.object-fit {
-    font-family: "object-fit: cover;";
-    -o-object-fit: cover
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .arrow,
@@ -73,23 +47,6 @@ a {
 
 [hidden] {
     display: none
-}
-
-.is-without-container {
-    margin: 0 -3.3rem;
-    padding: 0 3.3rem
-}
-
-@media only screen and (max-width: 1024px) {
-    .is-without-container {
-        padding: 0;
-        margin: 0
-    }
-}
-
-
-.gray {
-    background-color: #4f4f4f
 }
 
 img,
@@ -124,15 +81,6 @@ svg {
 img,
 svg {
     max-width: 100%
-}
-
-.object-fit {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover
 }
 
 @media only screen and (max-width: 1024px) {
@@ -219,7 +167,7 @@ svg {
     font-weight: 700
 }
 
-.content h1,
+/*.content h1,
 .h1 {
     font-size: 7.7rem;
     line-height: 98%
@@ -233,7 +181,7 @@ svg {
 
 .content h3,
 .h3 {
-    font-size: 4.6rem
+    font-size: 40px
 }
 
 .content h4,
@@ -252,10 +200,10 @@ svg {
 
 .content h6,
 .h6 {
-    font-size: 1.8rem;
+    font-size: 18px;
     line-height: 140%;
     font-weight: 500
-}
+}*/
 
 .error {
     font-size: 1.4rem
@@ -299,7 +247,7 @@ svg {
 
 .content_big li,
 .content_big p {
-    font-size: 1.8rem;
+    font-size: 18px;
     line-height: 140%;
     margin-bottom: 1.9rem
 }
@@ -513,8 +461,6 @@ svg {
 }
 
 .accordion {
-    padding-left: 7.9341317365%;
-    padding-right: 7.9341317365%;
     position: relative;
     -webkit-transition: background-color ease .4s;
     transition: background-color ease .4s
@@ -522,7 +468,7 @@ svg {
 
 .accordion.is-active {
     background-color: #fff;
-    z-index: 50
+    z-index: 5
 }
 
 .accordion.is-active .accordion__top {
@@ -588,6 +534,7 @@ svg {
 
 .accordion__content {
     display: none;
+    overflow: hidden;
     padding-bottom: 4rem;
     width: 62.3885918004%
 }
@@ -764,7 +711,7 @@ svg {
     height: 6.6rem;
     background: #FF0600;
     color: #fff;
-    font-family: Geometria;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     border-radius: 5px;
     -webkit-transition: ease .15s;
@@ -953,7 +900,7 @@ a.list__item:hover {
 
 .gallery-slider__cell_info {
     margin-left: auto;
-    margin-right: 8.5rem;
+    margin-right: 85px;
     width: 28.2934131737%;
     background: #fff;
     border-radius: 5px;
@@ -961,7 +908,7 @@ a.list__item:hover {
     position: relative;
     min-height: 250px;
     color: #0e0e0e;
-    padding: 8.4rem 4rem 8.1rem 7rem
+    padding: 40px;
 }
 
 .gallery-slider__cell_slider {
@@ -1230,30 +1177,6 @@ a.list__item:hover {
     fill: #0e0e0e
 }
 
-.link_hidden .link__arrow {
-    -webkit-transition: ease .15s
-}
-
-.link:hover .link__arrow,
-.link:hover .link__arrow .stroke,
-.link_red .link__arrow .stroke {
-    fill: #FF0600
-}
-
-.link_hidden .link__arrow {
-    opacity: 0;
-    transition: ease .15s
-}
-
-.link_hidden:hover .link__arrow {
-    opacity: 1
-}
-
-.link:hover .link__arrow {
-    margin-right: 0;
-    width: 1.8rem
-}
-
 @media only screen and (max-width: 580px) {
     .link {
         padding-right: 1.3rem
@@ -1434,9 +1357,20 @@ a.list__item:hover {
 }
 
 .conditions {
-    padding-top: 12rem;
-    padding-bottom: 11.2rem;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
     color: #fff
+}
+
+.conditions__bg {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    background: #4F4F4F;
 }
 
 .conditions__slider {
@@ -1444,8 +1378,8 @@ a.list__item:hover {
 }
 
 .conditions__title {
-    width: 52.3952095808%;
-    font-size: 4rem
+    max-width: 700px;
+    font-size: 40px
 }
 
 .conditions__title br {
@@ -1480,11 +1414,6 @@ a.list__item:hover {
     .conditions {
         padding-top: 4.8rem;
         padding-bottom: 2.8rem
-    }
-
-    .conditions__wrap {
-        margin-left: 28px;
-        margin-right: 28px
     }
 
     .conditions__title {
@@ -1559,6 +1488,10 @@ a.list__item:hover {
     }
 }
 
+.head-preview {
+    position: relative;
+}
+
 .head-preview__button {
     min-width: 240px
 }
@@ -1570,82 +1503,51 @@ a.list__item:hover {
 
 .head-preview__inner {
     position: relative;
-    padding-top: 4.5rem;
-    padding-bottom: 4.4rem;
+    padding-top: 120px;
+    padding-bottom: 120px;
     color: #fff
 }
 
 .head-preview__bg {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
+    transform: translateX(-50%);
     overflow: hidden
 }
 
-.head-preview__title {
-    margin-bottom: 2.7rem
+.head-preview .head-preview__bg img,
+.head-preview .head-preview__bg picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1.head-preview__title {
+    margin-bottom: 2.7rem;
+    font-size: 56px;
+    line-height: 120%;
 }
 
 .head-preview__box {
-    margin-bottom: 7.3rem;
-    max-width: 49.251497006%
-}
-
-.head-preview__bottom-item {
-    font-weight: 400
-}
-
-.head-preview__bottom-item .icon {
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.6rem;
-    margin-right: 1.1rem;
-    fill: #FF0600
-}
-
-.head-preview__bottom-item:not(:last-child) {
-    margin-right: 5.6rem;
-    cursor: pointer
-}
-
-@media only screen and (max-width: 768px) {
-
-
-    .head-preview .head-preview__box {
-        max-width: 65.2515%
-    }
+    max-width: 700px;
 }
 
 @media only screen and (max-width: 580px) {
-
-    .head-preview .head-preview__bg-img_desktop,
-    .head-preview .head-preview__button {
-        display: none
-    }
 
     .head-preview .head-preview__title {
         margin-bottom: 3.3rem
     }
 
     .head-preview .head-preview__box {
-        max-width: 80%;
         margin-bottom: 0
     }
 
     .head-preview .head-preview__inner {
         padding-top: 5.1rem;
         padding-bottom: 2.9rem
-    }
-
-    .head-preview .head-preview__bg-inner {
-        -o-object-position: 70%;
-        object-position: 70%
-    }
-
-    .head-preview .head-preview__bg-img_mobile {
-        display: block
     }
 }
 
@@ -1655,12 +1557,6 @@ a.list__item:hover {
         -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse
-    }
-
-    .head-preview .head-preview__bottom-item {
-        margin-right: 0;
-        width: 100%;
-        margin-top: .7rem
     }
 }
 
@@ -3085,20 +2981,11 @@ a.list__item:hover {
     margin: 0 auto 20px;
     max-width: 1400px;
     width: 100%;
-    padding-left: 32px;
-    padding-right: 32px
 }
 
 @media screen and (max-width: 1440px) {
     .refinance {
         max-width: 1200px
-    }
-}
-
-@media screen and (max-width: 780px) {
-    .refinance {
-        padding-left: 16px;
-        padding-right: 16px
     }
 }
 
@@ -3133,7 +3020,7 @@ a.list__item:hover {
 }
 
 .refinance__quiz {
-    background-color: #fff;
+    background-color: #F3F3F3;
     padding: 60px 85px
 }
 
@@ -3314,7 +3201,8 @@ a.list__item:hover {
 .refinance__side {
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    width: 290px
+    width: 290px;
+    background: url(../img/tree_w.png) bottom -50px right -45px / 159px 165px no-repeat #fff;
 }
 
 @media screen and (max-width: 1440px) {
@@ -3335,13 +3223,9 @@ a.list__item:hover {
     }
 }
 
-.vantages__cell-icon {
-    background-color: #f3f3f3
-}
-
 .simple-calc__inner {
     background-color: #fff;
-    padding: 12rem 0
+    padding: 120px 0
 }
 
 .simple-calc__title {
@@ -3458,26 +3342,6 @@ a.list__item:hover {
     }
 }
 
-
-.vantages-step .wrap {
-    padding-bottom: 10rem
-}
-
-.vantages-step .icon-vantages_6 {
-    fill: #0e0e0e;
-    stroke: transparent
-}
-
-@media only screen and (max-width: 580px) {
-    .vantages-step .wrap {
-        padding-bottom: 0
-    }
-
-    .vantages-step .vantages__row {
-        padding: 0 1.3rem
-    }
-}
-
 .stroke {
     position: relative;
     display: inline-block
@@ -3517,13 +3381,13 @@ a.list__item:hover {
 }
 
 .vantages_big-margin {
-    padding-top: 11.1rem;
-    padding-bottom: 9.4rem
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .vantages__title {
     padding-top: 25.8536585366%;
-    font-size: 4rem
+    font-size: 40px;
 }
 
 .vantages__row {
@@ -3533,22 +3397,26 @@ a.list__item:hover {
 
 .vantages__text {
     font-weight: 400;
-    margin-top: 3.7rem
+    margin-top: 3.7rem;
+    font-size: 18px;
 }
 
 .vantages__cell {
     width: 29.5389048991%;
     margin: 1.8731988473%;
     position: relative;
-    display: block
+    display: block;
+    background-color: #f3f3f3;
 }
 
 .vantages__cell-icon {
-    width: 9rem;
-    height: 9rem;
+    border: 3px solid #f3f3f3;
+    background-color: #fff;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     position: absolute;
-    left: 5rem;
+    left: 50px;
     top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3559,12 +3427,12 @@ a.list__item:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: -4.5rem
+    margin-top: -45px
 }
 
 .vantages__cell-icon svg {
     display: block;
-    width: 3.4rem;
+    width: 34px;
     fill: transparent;
     -webkit-transition: ease .15s;
     transition: ease .15s;
@@ -3576,32 +3444,12 @@ a.list__item:hover {
     padding: 29.756097561% 7.3170731707% 13.1707317073% 11.9512195122%
 }
 
-.vantages__cell_white {
-    background: #fff;
-    border-radius: 5px
+.vantages__cell_transparent {
+    background-color: transparent;
 }
 
-.vantages__cell:hover .vantages__cell-icon svg {
-    stroke: #FF0600
-}
-
-.vantages__cell:hover .link {
-    color: #FF0600
-}
-
-.vantages__cell:hover .link__arrow {
-    opacity: 1;
-    fill: #FF0600;
-    margin-right: 0;
-    width: 1.8rem
-}
-
-.vantages__cell:hover .link__arrow .triangle {
-    stroke: #FF0600
-}
-
-.vantages__cell:hover .link__arrow .stroke {
-    fill: #FF0600
+.vantages__link {
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 1280px) {

@@ -1,0 +1,71 @@
+.spoiler {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 16px 0 32px;
+    background-color: $c-white;
+    border-top: 1px solid $c-border;
+
+    @include max(mobile) {
+        padding: 8px 0 24px;
+    }
+
+    &__intro {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: flex-start;
+        cursor: pointer;
+        padding: 0 0 24px;
+
+        @include max(mobile) {
+            padding: 0 0 16px;
+        }
+    }
+
+    &__title {
+        color: $c-text;
+        line-height: 1em;
+        letter-spacing: -0.02em;
+
+        @include max(mobile) {
+            max-width: none;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $c-accent;
+        background-color: transparent;
+        border: 1px solid $c-border;
+        border-color: $c-border;
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+        border-radius: 2px;
+        transition: all $tr-time;
+        transform: rotateY(180deg);
+
+        svg {
+            width: 16px;
+            height: 16px;
+            transition: all $tr-time;
+        }
+    }
+
+    &__intro:hover &__icon,
+    &.active &__icon {
+        background: $c-accent-light2;
+        border-color: $c-accent;
+    }
+
+    &__content {
+        display: none;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,21 @@
+-
+	const defaultSpoilerProps = {
+		classes: '',
+		title: '',
+	}
+
+mixin spoiler(props = defaultSpoilerProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultSpoilerProps.classes,
+			title: props.title ? props.title : defaultSpoilerProps.title
+		}
+
+	.spoiler(class= checkProps.classes data-js="spoiler")&attributes(attributes)
+		.spoiler__intro
+			.spoiler__title.title--32!= checkProps.title
+			.spoiler__icon
+				svg
+					use(xlink:href=`img/sprites/sprite.svg#arrow_enter`)
+		.spoiler__content(data-js="spoilerContent")
+			block
